@@ -13,17 +13,6 @@ pytorch 1.6.0
 the model files define the architechture of the evalated models including MLP and  CNN for MNIST, ResNet18 for Cifar-10 and ResNet34 for Tiny-ImageNet.   
 All of the models have three implementations respectively for not adding noise,  adding non optimized noise and adding optimized noise.  
 ## Experiment    
-### Settings  
-|     Models    |                                  Attack Methods                                  |   |                        |                              |                                                   |   |
-|:-------------:|:--------------------------------------------------------------------------------:|:-:|:----------------------:|:----------------------------:|:-------------------------------------------------:|---|  
-|               |                                 Corruption Noise                                 |   |          FGSM          |            L-BFGS            |                        PGD                        |   |  
-|     MNIST     | Including Gaussian Noise, Impulse Noise,  Glass Blur Noise,  and  Contrast Noise |   |      \epsilon=0.1      | \epsilon=5\times10^{-1} N=10 | \alpha=\frac{5}{255},\epsilon=\frac{25}{255},N=10 |   |  
-|               |                                                                                  |   |                        |                              |                                                   |   |  
-|    Cifar-10   |                                                                                  |   |                        | \epsilon=5\times10^{-2} N=20 |  \alpha=\frac{2}{255},\epsilon=\frac{8}{255},N=5  |   |  
-|               |                                                                                  |   |                        |                              |                                                   |   |  
-| Tiny-ImageNet |                                                                                  |   | \epsilon=\frac{2}{255} | \epsilon=5\times10^{-2} N=10 |  \alpha=\frac{2}{255},\epsilon=\frac{5}{255},N=3  |   |  
-|               |                                                                                  |   |                        |                              |                                                   |   |  
-###  Results  
 #### On MNIST  
 MLP: not adding noise  
 MLP+: adding non optimized noise  
